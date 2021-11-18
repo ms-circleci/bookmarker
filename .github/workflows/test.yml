@@ -41,7 +41,7 @@ jobs:
         id: hello
         run: |
           echo "Hello world"
-          sleep 10s
+          sleep 20s
       - name: parallel first
         if: steps.hello.outcome == 'success'
         run: |
@@ -119,4 +119,21 @@ jobs:
         run: |
           echo "Bye world"
           sleep 10s      
-      
+  first_parallel:
+    runs-on: ubuntu-latest  
+    needs: test
+    steps:
+      - name: Hello
+        id: hello
+        run: |
+          echo "Hello world"
+          sleep 20s
+  second_parallel:
+    runs-on: ubuntu-latest  
+    needs: test
+    steps:
+      - name: Hello
+        id: hello
+        run: |
+          echo "Hello world"
+          sleep 20s          
