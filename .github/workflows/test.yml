@@ -38,9 +38,20 @@ jobs:
 
     steps:
       - name: Hello
+        id: hello
         run: |
           echo "Hello world"
           sleep 10s
+      - name: parallel first
+        if: steps.hello.outcome = 'success'
+        run: |
+          echo "first parallel step"
+          sleep 20
+      - name: parallel second
+        if: steps.hello.outcome = 'success'
+        run: |
+          echo "second parallel step"
+          sleep 20        
       - name: Checkout branch
         uses: actions/checkout@v2
       - name: Install Ruby
