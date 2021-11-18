@@ -2,7 +2,7 @@
 name: test
 on: [push, pull_request]
 jobs:
-  test:
+  hello:
     runs-on: ubuntu-latest
     env:
       BUNDLE_JOBS: 2
@@ -12,20 +12,6 @@ jobs:
         run: |
           echo "Hello world"
           sleep 20s
-      - name: parallel first
-        if: steps.hello.outcome == 'success'
-        run: |
-          echo "first parallel step"
-          sleep 20
-      - name: parallel second
-        if: steps.hello.outcome == 'success'
-        run: |
-          echo "second parallel step"
-          sleep 20        
-      - name: Bye
-        run: |
-          echo "Bye world"
-          sleep 10s      
   first_parallel:
     runs-on: ubuntu-latest  
     needs: test
@@ -44,3 +30,39 @@ jobs:
         run: |
           echo "Hello world"
           sleep 20s          
+  third_parallel:
+    runs-on: ubuntu-latest  
+    needs: test
+    steps:
+      - name: Hello
+        id: hello
+        run: |
+          echo "Hello world"
+          sleep 10s
+  fourth_parallel:
+    runs-on: ubuntu-latest  
+    needs: test
+    steps:
+      - name: Hello
+        id: hello
+        run: |
+          echo "Hello world"
+          sleep 10s   
+  fifth_parallel:
+    runs-on: ubuntu-latest  
+    needs: test
+    steps:
+      - name: Hello
+        id: hello
+        run: |
+          echo "Hello world"
+          sleep 10s 
+  bye:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel, second_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s              
