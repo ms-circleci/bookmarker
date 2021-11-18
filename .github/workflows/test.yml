@@ -66,3 +66,12 @@ jobs:
         run: |
           echo "Bye world"
           sleep 10s              
+  bye_bye:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel, bye] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s    
