@@ -43,12 +43,12 @@ jobs:
           echo "Hello world"
           sleep 10s
       - name: parallel first
-        if: steps.hello.outcome != 'success'
+        if: steps.hello.outcome == 'success'
         run: |
           echo "first parallel step"
           sleep 20
       - name: parallel second
-        if: steps.hello.outcome != 'success'
+        if: steps.hello.outcome == 'success'
         run: |
           echo "second parallel step"
           sleep 20        
