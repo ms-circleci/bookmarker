@@ -93,4 +93,138 @@ jobs:
         run: |
           echo "Bye world"
           sleep 10s  
-          
+  bye_2:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s 
+  bye_3:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s      
+  bye_4:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s  
+  bye_5:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s 
+  bye_6:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s           
+  bye_7:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s  
+  bye_8:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s            
+  bye_9:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s  
+  bye_10:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s 
+  bye_11:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s      
+  bye_12:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s  
+  bye_13:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s 
+  bye_14:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s           
+  bye_15:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s  
+  bye_16:
+    runs-on: ubuntu-latest  
+    needs: [first_parallel] 
+    steps:
+      - name: Bye
+        id: bye
+        run: |
+          echo "Bye world"
+          sleep 10s 
